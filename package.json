@@ -4,7 +4,9 @@
   "description": "build SEO static pages with the webpack template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --open",
+    "build": "webpack-cli"
   },
   "repository": {
     "type": "git",
@@ -13,6 +15,7 @@
   "author": "joaner",
   "license": "ISC",
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.18",
     "extract-loader": "^1.0.2",
     "file-loader": "^1.1.6",
     "html-loader": "^0.5.5",
