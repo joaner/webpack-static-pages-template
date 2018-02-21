@@ -1,0 +1,29 @@
+{
+  "name": "webpack-static-pages-template",
+  "version": "0.1.0",
+  "description": "build SEO static pages with the webpack template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaner/webpack-static-pages-template.git"
+  },
+  "author": "joaner",
+  "license": "ISC",
+  "devDependencies": {
+    "extract-loader": "^1.0.2",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "less": "^3.0.1",
+    "less-loader": "^4.0.5",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "bugs": {
+    "url": "https://github.com/joaner/webpack-static-pages-template/issues"
+  },
+  "homepage": "https://github.com/joaner/webpack-static-pages-template#readme"
+}
