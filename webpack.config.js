@@ -70,6 +70,27 @@ module.exports = {
         ],
       },
       {
+        test: /\.css$/,
+        loaders: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "assets/[name].[hash:6].css",
+            },
+          },
+          {
+            loader: "extract-loader",
+          },
+          {
+            loader: "css-loader",
+            options: {
+              minimize: true,
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+      {
         test: /\.js$/,
         loaders: [
           {
