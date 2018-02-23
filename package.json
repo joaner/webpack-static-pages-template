@@ -22,6 +22,7 @@
     "html-webpack-plugin": "^2.30.1",
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
+    "pug-html-loader": "^1.1.5",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   },

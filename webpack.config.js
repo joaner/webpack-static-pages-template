@@ -8,6 +8,7 @@ module.exports = {
   entry: {
     home: './pages/index.html',
     about: './pages/about.html',
+    contact: './pages/contact.pug',
   },
 
   output: {
@@ -27,7 +28,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[name].[ext]",
+              name: "[name].html",
             },
           },
           {
@@ -42,6 +43,33 @@ module.exports = {
               removeComments: false,
               collapseWhitespace: false
             },
+          },
+        ],
+      },
+      {
+        test: /\.pug/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].html",
+            },
+          },
+          {
+            loader: "extract-loader",
+          },
+          {
+            loader: "html-loader",
+            options: {
+              attrs: ["img:src", "link:href", "script:src"],
+              interpolate: true,
+              minimize: true,
+              removeComments: false,
+              collapseWhitespace: false
+            },
+          },
+          {
+            loader: "pug-html-loader",
           },
         ],
       },
@@ -115,7 +143,7 @@ module.exports = {
     ]
   },
 
-  externals: /js\/*\.js/,
+  externals: [/js\/*\.js/],
 
   plugins: [
     // minify javascript
