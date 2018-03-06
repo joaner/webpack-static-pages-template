@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --open",
-    "build": "webpack-cli"
+    "build": "node_modules/webpack-cli/bin/webpack.js"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,9 @@
     "less": "^3.0.1",
     "less-loader": "^4.0.5",
     "pug-html-loader": "^1.1.5",
-    "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack": "4.1.0",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
   },
   "bugs": {
     "url": "https://github.com/joaner/webpack-static-pages-template/issues"

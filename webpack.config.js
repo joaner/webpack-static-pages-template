@@ -5,6 +5,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const distPath = path.resolve(__dirname, 'dist')
 
 module.exports = {
+  mode: 'production',
+
   entry: {
     home: './pages/index.html',
     about: './pages/about.html',
@@ -33,6 +35,9 @@ module.exports = {
           },
           {
             loader: "extract-loader",
+            options: {
+              publicPath: ''
+            },
           },
           {
             loader: "html-loader",
@@ -57,6 +62,9 @@ module.exports = {
           },
           {
             loader: "extract-loader",
+            options: {
+              publicPath: ''
+            },
           },
           {
             loader: "html-loader",
@@ -84,6 +92,9 @@ module.exports = {
           },
           {
             loader: "extract-loader",
+            options: {
+              publicPath: ''
+            },
           },
           {
             loader: "css-loader",
@@ -108,6 +119,9 @@ module.exports = {
           },
           {
             loader: "extract-loader",
+            options: {
+              publicPath: ''
+            },
           },
           {
             loader: "css-loader",
@@ -146,9 +160,6 @@ module.exports = {
   externals: [/js\/*\.js/],
 
   plugins: [
-    // minify javascript
-    new webpack.optimize.UglifyJsPlugin(),
-
     new CleanWebpackPlugin(distPath)
   ],
 }
